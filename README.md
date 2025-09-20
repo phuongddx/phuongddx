@@ -111,6 +111,24 @@ I'm a **Senior iOS Engineer** with over 5 years of experience building high-qual
       </div>
     </td>
     <td width="50%">
+      <h3 align="center">iFax</h3>
+      <div align="center">
+        <a href="https://github.com/phuongddx/fax-app">
+          <img src="https://img.shields.io/badge/Business-9C27B0?style=for-the-badge&logo=fax&logoColor=white" alt="Business">
+        </a>
+        <p><strong>Digital Fax Solution</strong></p>
+        <p>Modern fax application enabling users to send and receive faxes digitally with document scanning, PDF processing, and cloud storage integration.</p>
+        <p>
+          <img src="https://img.shields.io/badge/Swift-FA7343?style=flat&logo=swift&logoColor=white" alt="Swift">
+          <img src="https://img.shields.io/badge/SwiftUI-0071E3?style=flat&logo=swift&logoColor=white" alt="SwiftUI">
+          <img src="https://img.shields.io/badge/PDFKit-FF6B6B?style=flat" alt="PDFKit">
+          <img src="https://img.shields.io/badge/Vision-4FC08D?style=flat&logo=apple&logoColor=white" alt="Vision">
+        </p>
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" colspan="2">
       <h3 align="center">More Projects</h3>
       <div align="center">
         <a href="https://phuongddx.vercel.app/">
