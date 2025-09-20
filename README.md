@@ -46,17 +46,6 @@ I'm a **Senior iOS Engineer** with over 5 years of experience building high-qual
 ![Unit Testing](https://img.shields.io/badge/Unit_Testing-4FC08D?style=flat-square&logo=testinglibrary&logoColor=white)
 ![UI Testing](https://img.shields.io/badge/UI_Testing-FF6B6B?style=flat-square&logo=testinglibrary&logoColor=white)
 
-### 📊 GitHub Stats
-
-<div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=phuongddx&show_icons=true&theme=tokyonight&hide_border=true&count_private=true" width="48%" alt="GitHub Stats">
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=phuongddx&theme=tokyonight&hide_border=true" width="48%" alt="GitHub Streak">
-</div>
-
-<div align="center">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=phuongddx&theme=tokyonight&hide_border=true&layout=compact&langs_count=8" width="60%" alt="Top Languages">
-</div>
-
 ### 🎯 Featured Projects
 
 <table>
@@ -141,6 +130,12 @@ I'm a **Senior iOS Engineer** with over 5 years of experience building high-qual
   </tr>
 </table>
 
+### 📊 GitHub Stats
+
+<div align="left">
+  <img src="https://github-readme-stats.vercel.app/api?username=phuongddx&show_icons=true&theme=tokyonight&hide_border=true&count_private=true" width="48%" alt="GitHub Stats">
+</div>
+
 ### 🏆 Achievements
 
 <div align="center">
@@ -161,7 +156,7 @@ I'm a **Senior iOS Engineer** with over 5 years of experience building high-qual
 
 I'm always interested in collaborating on innovative iOS projects and discussing mobile development trends. Feel free to reach out!
 
-📧 **Email:** hello@phuongddx.com
+📧 **Email:** 95doanphuong@gmail.com
 💼 **LinkedIn:** [linkedin.com/in/phuongddx](https://linkedin.com/in/phuongddx)
 🌐 **Portfolio:** [phuongddx.vercel.app](https://phuongddx.vercel.app/)
 🐦 **Twitter:** [@phuongddx](https://twitter.com/phuongddx)
