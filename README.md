@@ -41,79 +41,6 @@ Passionate about:
 ![Unit Testing](https://img.shields.io/badge/Unit_Testing-25A162?style=for-the-badge)
 ![UI Testing](https://img.shields.io/badge/UI_Testing-1E88E5?style=for-the-badge)
 
-### 🚀 Featured Projects
-
-Here are some of my flagship iOS applications showcasing expertise in SwiftUI, UIKit, and modern architecture patterns.
-
-<table>
-<tr>
-<td width="50%">
-
-#### 📱 SP Utilities: Greener Life
-<!-- TODO: Replace with actual screenshot URL after uploading to GitHub Issues -->
-<img src="https://via.placeholder.com/200x400/2196F3/FFFFFF?text=SP+Utilities" width="200" alt="SP Utilities" />
-
-**Tech Stack:** SwiftUI, Combine, MVVM, Core Data
-**Highlights:**
-- 🎯 Real-time utility tracking with reactive UI using Combine publishers
-- 💰 Gamified rewards system with achievement milestones
-- 📊 Interactive data visualization using Swift Charts framework
-
-[View on App Store](#) | [GitHub](#)
-
-</td>
-<td width="50%">
-
-#### 🔒 Windscribe VPN
-<!-- TODO: Replace with actual screenshot URL -->
-<img src="https://via.placeholder.com/200x400/1E88E5/FFFFFF?text=Windscribe+VPN" width="200" alt="Windscribe VPN" />
-
-**Tech Stack:** UIKit, Network Extension, CoreLocation
-**Highlights:**
-- 🛡️ Custom VPN protocol implementation with packet tunneling
-- 🌍 Multi-region server management with latency optimization
-- ⚡ High-performance network tunneling (100+ Mbps throughput)
-
-[View on App Store](#) | [GitHub](#)
-
-</td>
-</tr>
-<tr>
-<td width="50%">
-
-#### 📚 ZilLearn
-<!-- TODO: Replace with actual screenshot URL -->
-<img src="https://via.placeholder.com/200x400/25A162/FFFFFF?text=ZilLearn" width="200" alt="ZilLearn" />
-
-**Tech Stack:** SwiftUI, Firebase, async/await, MVVM
-**Highlights:**
-- 🎓 Adaptive learning algorithm with progress tracking
-- 🔔 Real-time notifications using Firebase Cloud Messaging
-- 📱 Offline-first architecture with CoreData sync layer
-
-[View on App Store](#) | [GitHub](#)
-
-</td>
-<td width="50%">
-
-#### 📠 iFax
-<!-- TODO: Replace with actual screenshot URL -->
-<img src="https://via.placeholder.com/200x400/9B59B6/FFFFFF?text=iFax" width="200" alt="iFax" />
-
-**Tech Stack:** UIKit, Vision Framework, PDFKit, AVFoundation
-**Highlights:**
-- 📷 Document scanning with Vision OCR and perspective correction
-- 📄 Advanced PDF processing with annotation and compression
-- ☁️ Cloud sync with iCloud Drive and conflict resolution
-
-[View on App Store](#) | [GitHub](#)
-
-</td>
-</tr>
-</table>
-
-> **Note:** Screenshot placeholders above should be replaced with actual iOS Simulator screenshots uploaded to GitHub Issues for permanent hosting.
-
 ### 🌱 Currently Exploring
 
 Always learning and expanding my iOS development toolkit:
@@ -126,10 +53,6 @@ let currentFocus = [
     "TCA": "Composable Architecture for scalable state management"
 ]
 ```
-
-### 📈 Activity & Contributions
-
-![GitHub Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=phuongddx&theme=dracula&hide_border=true&area=true&custom_title=Contribution%20Activity)
 
 ### 📫 Let's Connect
 
