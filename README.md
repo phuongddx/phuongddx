@@ -41,19 +41,6 @@ Passionate about:
 ![Unit Testing](https://img.shields.io/badge/Unit_Testing-25A162?style=for-the-badge)
 ![UI Testing](https://img.shields.io/badge/UI_Testing-1E88E5?style=for-the-badge)
 
-### 🌱 Currently Exploring
-
-Always learning and expanding my iOS development toolkit:
-
-```swift
-let currentFocus = [
-    "SwiftData": "Modern data persistence with @Model and @Query",
-    "visionOS": "Spatial computing with RealityKit and ARKit",
-    "Swift 6": "Strict concurrency and data isolation patterns",
-    "TCA": "Composable Architecture for scalable state management"
-]
-```
-
 ### 📫 Let's Connect
 
 I'm always open to interesting conversations and opportunities. Reach out!
