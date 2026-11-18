@@ -1,70 +1,101 @@
-<div align="center">
-  <a href="https://phuongddx.cc">
-    <img width="1000" src="https://readme-typing-svg.herokuapp.com?font=SF+Pro+Display&size=26&duration=3000&pause=1000&color=2196F3&center=true&vCenter=true&width=1000&lines=Hi+%F0%9F%91%8B%2C+I%27m+Phuong+Doan;AI+Engineer+%E2%80%94+LLMs+%C2%B7+Retrieval+%C2%B7+Agents;Author+of+jarvis-mcp+%E2%80%94+code+intelligence+for+coding+agents;6%2B+years+shipping+production+software" alt="Phuong Doan — AI Engineer" />
+<a href="https://phuongddx.cc">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/hero-dark.svg">
+    <img src="assets/hero-light.svg" width="100%" alt="Phuong Doan, Ho Chi Minh City. Diagram: an agent query goes to jarvis, which searches a symbol index, a lexical index and a semantic index, then fuses the results by reciprocal rank fusion.">
+  </picture>
+</a>
+
+# AI engineer building code intelligence for coding agents
+
+I have shipped production software for more than six years, first iOS apps and now LLM and
+retrieval systems end to end. The parts that decide whether an AI system works in production
+are the boring ones: chunking and embedding strategy, gateway design with SSE streaming and
+fallback chains, agent observability, and the packaging that ships it. I build the boring ones.
+
+**[Read my portfolio](https://phuongddx.cc)** &nbsp;·&nbsp; [LinkedIn](https://linkedin.com/in/phuongddx) &nbsp;·&nbsp; [X](https://x.com/phuongddx) &nbsp;·&nbsp; [Email me](mailto:95doanphuong@gmail.com)
+
+## jarvis, a code-intelligence MCP server
+
+<a href="https://github.com/jarvis-intelligence/jarvis">
+  <img src="https://raw.githubusercontent.com/jarvis-intelligence/jarvis/main/docs/assets/demo.gif" width="100%" alt="grep returns noisy results; jarvis findReferences returns 10 exact file, line and column occurrences">
+</a>
+
+jarvis precomputes a local index so a coding agent stops spending its context window on grep.
+It gives Claude Code, Cursor and Codex ten MCP tools: SCIP navigation (`goToDefinition`,
+`findReferences`, `callHierarchy`, `typeHierarchy`), Zoekt lexical search, and semantic search,
+with the result sets fused by reciprocal rank fusion.
+
+Code is chunked along the tree-sitter AST (256 to 512 tokens, 50 overlap) and embeddings are
+pinned to a revision. A new index is published atomically: `os.replace` flips one pointer, so
+there is no downtime window. Code and indexes never leave your machine. Semantic search ships
+in source builds only; the Homebrew binary leaves it out.
+
+```bash
+brew install jarvis-intelligence/jarvis/jarvis
+```
+
+[See the jarvis repo](https://github.com/jarvis-intelligence/jarvis) &nbsp;·&nbsp; [Get `jarvis-mcp` on PyPI](https://pypi.org/project/jarvis-mcp/) &nbsp;·&nbsp; [Find it in the MCP Registry](https://registry.modelcontextprotocol.io/)
+
+`Python` `LanceDB` `tree-sitter` `SCIP` `Zoekt`
+
+## StressMonitor, a stress score for iPhone and Apple Watch
+
+<p align="center">
+  <a href="https://github.com/phuongddx/stress-coach-ios">
+    <img src="https://raw.githubusercontent.com/phuongddx/stress-coach-ios/main/docs/screenshots/1-home.png" width="30%" alt="StressMonitor home screen with the stress score and a mood check-in">
+    &nbsp;
+    <img src="https://raw.githubusercontent.com/phuongddx/stress-coach-ios/main/docs/screenshots/2-trends.png" width="30%" alt="StressMonitor trends screen with distribution charts and pattern insights">
+    &nbsp;
+    <img src="https://raw.githubusercontent.com/phuongddx/stress-coach-ios/main/docs/screenshots/3-chat.png" width="30%" alt="StressMonitor AI coach chat">
   </a>
-</div>
+</p>
 
-<div align="center">
+A privacy-first stress score for iOS, with a standalone watch app. Five factors feed the score;
+when a signal is missing its weight moves to the others, and each factor carries its own
+confidence. An AI coach streams its replies over SSE, and raw health samples never enter the
+model path. Widgets, complications, CloudKit sync and StoreKit subscriptions are in the build.
 
-**AI Engineer** · Ho Chi Minh City, Vietnam
+[See the StressMonitor repo](https://github.com/phuongddx/stress-coach-ios)
 
-6+ years shipping production software — iOS apps to the App Store, now LLM and retrieval
-systems end to end. I care about the parts that decide whether an AI system works in
-production: **chunking and embedding strategy**, **gateway design with SSE streaming and
-fallback chains**, **agent observability** — and the packaging that ships it.
+`SwiftUI` `watchOS` `HealthKit` `StoreKit`
 
-[![PyPI](https://img.shields.io/pypi/v/jarvis-mcp?label=jarvis-mcp&logo=pypi&logoColor=white)](https://pypi.org/project/jarvis-mcp/)
-[![MCP Registry](https://img.shields.io/badge/MCP_Registry-listed-4E4EC1)](https://registry.modelcontextprotocol.io/)
-[![Homebrew](https://img.shields.io/badge/Homebrew-tap-F05032?logo=homebrew&logoColor=white)](https://github.com/phuongddx/homebrew-spm-cache)
-[![App Store](https://img.shields.io/badge/App_Store-StressMonitor-0D96F6?logo=appstore&logoColor=white)](https://github.com/phuongddx/stress-coach-ios)
+## Tools for Swift and LLM teams
 
-</div>
+**[scip-swift](https://github.com/jarvis-intelligence/scip-swift)** &nbsp; `Swift` `SourceKit-LSP`<br>
+A SCIP indexer for Swift. It brings go-to-definition, find-references and type-hierarchy
+navigation to Apple-platform codebases, with prebuilt binaries from a Homebrew tap.
 
----
+**[llm-gateway](https://github.com/phuongddx/llm-gateway)** &nbsp; `FastAPI` `SSE` `SQLite`<br>
+An OpenAI-compatible gateway (`/v1/chat/completions`) that routes 500+ models behind one key,
+with `model="auto"` routing and passthrough for unknown names. It logs time to first token,
+end-to-end latency and token usage for every request, so model choice rests on a measurement.
 
-- 🔭 **Now** — building [**jarvis**](https://github.com/jarvis-intelligence/jarvis), local-first code intelligence for coding agents
-- 🌱 **Learning** — Go
-- 💬 **Ask me about** — MCP servers, hybrid retrieval / RRF, tree-sitter chunking, SSE gateways, shipping iOS + watchOS
+**[BoosterSimApp](https://github.com/phuongddx/BoosterSimApp)** &nbsp; `Swift` `AppKit` `ScreenCaptureKit`<br>
+A macOS menu-bar companion for the iOS Simulator: a floating side panel that follows the
+Simulator window, screenshots and recording with App Store Connect presets, 8pt-grid and
+safe-area overlays, a live accessibility-tree inspector and network throttling. It ships as a
+notarized DMG with Sparkle updates, and its `boostersim` CLI lets AI agents drive the simulator.
 
-## 🔭 Featured work
+**[spm-cache](https://github.com/phuongddx/spm-cache)** &nbsp; `Ruby` `SPM` `GitHub Actions`<br>
+A cache proxy for Swift Package Manager that serves prebuilt xcframeworks. Install it from a
+[Homebrew tap](https://github.com/phuongddx/homebrew-spm-cache) and wire it into CI with a
+[GitHub Action](https://github.com/phuongddx/spm-cache-action).
 
-| Project | What it does |
-|---|---|
-| **[jarvis](https://github.com/jarvis-intelligence/jarvis)**<br>`Python` `LanceDB` `tree-sitter` `SCIP` `Zoekt` | Local-first **code-intelligence MCP server** — 9 tools exposing SCIP navigation (`goToDefinition`, `findReferences`, `callHierarchy`…), Zoekt lexical search, and semantic search **fused via reciprocal rank fusion**. tree-sitter AST chunking (256–512 tokens, 50 overlap), revision-pinned embeddings, and atomic index publishing (`os.replace` flips the pointer — no downtime window). Shipped as **[`jarvis-mcp` on PyPI](https://pypi.org/project/jarvis-mcp/)** (Cython wheels, cp312–cp314) and listed in the **official MCP Registry**, with one-command plugins for Claude Code, Cursor, and Codex. |
-| **[scip-swift](https://github.com/jarvis-intelligence/scip-swift)**<br>`Swift` `SourceKit-LSP` | SCIP code-intelligence indexer for **Swift** — brings go-to-def / find-refs / type-hierarchy navigation to Apple-platform codebases. Prebuilt binaries via a Homebrew tap; contributed the upstream `global_symbols.relationships` fix to `scip-code/scip` so `typeHierarchy` resolves. |
-| **[llm-gateway](https://github.com/phuongddx/llm-gateway)**<br>`FastAPI` `SSE` `SQLite` | **OpenAI-compatible gateway** (`/v1/chat/completions`) routing **500+ models** behind one key, `model="auto"` smart routing, passthrough for unknown names. Every request instrumented — **TTFT, end-to-end latency, token usage** — so model choice is a measurement, not an impression. |
-| **[BoosterSimApp](https://github.com/phuongddx/BoosterSimApp)**<br>`Swift` `AppKit` `ScreenCaptureKit` | macOS **menu-bar companion for the iOS Simulator** — a floating side panel that tracks the Simulator window (`CGWindowList` + `AXObserver`), ScreenCaptureKit screenshots/recording with App Store Connect presets, 8pt-grid and safe-area overlays, a live AX-tree inspector, and network throttling via a DEBUG-only in-simulator framework. Ships as a **notarized, Sparkle-updated DMG**; the bundled `boostersim` CLI exposes simulator control to **AI agents**. |
-| **[StressMonitor](https://github.com/phuongddx/stress-coach-ios)**<br>`SwiftUI` `watchOS` `HealthKit` `StoreKit` | Privacy-first stress scoring on the **App Store** (iOS + standalone watch app): five-factor score with **weight redistribution for missing signals** and per-factor confidence, streaming **AI coach over SSE**, widgets/complications, CloudKit sync, StoreKit subscriptions. Raw health samples never enter the model path. |
-| **[spm-cache](https://github.com/phuongddx/spm-cache)**<br>`Ruby` `SPM` `GitHub Actions` | SPM dependency **cache proxy** serving prebuilt xcframeworks — installed via a [Homebrew tap](https://github.com/phuongddx/homebrew-spm-cache), wired into CI with a [GitHub Action](https://github.com/phuongddx/spm-cache-action). |
+## Upstream contributions
 
-## 🌱 Open source
+- **[OmniRoute](https://github.com/diegosouzapw/OmniRoute)**, an MIT-licensed AI gateway in front of 290+ providers: SSE streaming for GLM-5.3 effort tiers ([#11415](https://github.com/diegosouzapw/OmniRoute/pull/11415)).
+- **[scip-code/scip](https://github.com/scip-code/scip)**: the `global_symbols.relationships` fix that makes `typeHierarchy` resolve ([#465](https://github.com/scip-code/scip/pull/465)).
 
-- **[OmniRoute](https://github.com/diegosouzapw/OmniRoute)** — MIT-licensed AI gateway fronting **290+ providers** (works with Claude Code, Codex, Cursor). Landed **SSE streaming for GLM-5.3 effort tiers** upstream ([#11415](https://github.com/diegosouzapw/OmniRoute/pull/11415)).
-- **[scip-code/scip](https://github.com/scip-code/scip)** — upstream converter fix so `typeHierarchy` resolves ([#465](https://github.com/scip-code/scip/pull/465)).
-
-## 🧰 Toolbox
+## Toolbox
 
 | | |
 |---|---|
-| **AI & agents** | MCP servers · tool calling · RAG & hybrid search (dense + lexical + symbol, RRF) · embeddings (`bge-m3`, `e5`, `nomic`) · SSE streaming · model routing & fallback chains · agent observability & tracing |
-| **Backend & data** | Python (FastAPI) · TypeScript (Deno/Hono, Next.js) · PostgreSQL (RLS, `pg_cron`) · SQLite · LanceDB · Supabase · Redis · Docker · GitHub Actions |
-| **Shipping** | PyPI trusted publishing · cibuildwheel · Homebrew taps · Fastlane → TestFlight · Vercel / Render / Dokploy |
-| **Mobile** | Swift · SwiftUI · UIKit · watchOS · HealthKit · StoreKit · React Native / Expo |
+| **AI and agents** | MCP servers, tool calling, RAG and hybrid search (dense, lexical and symbol, fused by RRF), embeddings (`bge-m3`, `e5`, `nomic`), SSE streaming, model routing and fallback chains, agent observability and tracing |
+| **Backend and data** | Python (FastAPI), TypeScript (Deno/Hono, Next.js), PostgreSQL (RLS, `pg_cron`), SQLite, LanceDB, Supabase, Redis, Docker, GitHub Actions |
+| **Shipping** | PyPI trusted publishing, cibuildwheel, Homebrew taps, Fastlane to TestFlight, Vercel, Render, Dokploy |
+| **Mobile** | Swift, SwiftUI, UIKit, watchOS, HealthKit, StoreKit, React Native and Expo |
 
-<div align="center">
-  <img height="160" src="https://streak-stats.demolab.com/?user=phuongddx&background=FFFFFF" alt="GitHub streak" />
-</div>
+I am learning Go at the moment. Ask me about MCP servers, hybrid retrieval and RRF, tree-sitter
+chunking, SSE gateways, or shipping iOS and watchOS apps.
 
----
-
-<div align="center">
-
-*The parts that decide whether an AI system works in production are the boring ones —*
-*chunking, routing, packaging, observability. I build the boring ones.*
-
-[![Portfolio](https://img.shields.io/badge/phuongddx.cc-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://phuongddx.cc)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/phuongddx)
-[![X](https://img.shields.io/badge/X-000000?style=for-the-badge&logo=x&logoColor=white)](https://x.com/phuongddx)
-[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:95doanphuong@gmail.com)
-
-</div>
+**[Read my portfolio](https://phuongddx.cc)** &nbsp;·&nbsp; [Email me](mailto:95doanphuong@gmail.com)
