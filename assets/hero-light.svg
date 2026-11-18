@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 440" width="880" height="440" role="img" aria-labelledby="t d">
+<title id="t">Phuong Doan, Ho Chi Minh City</title>
+<desc id="d">An agent query goes to jarvis, which searches a symbol index, a lexical index and a semantic index, then fuses the results by reciprocal rank fusion.</desc>
+<style>
+  .name { font: 500 56px -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif; letter-spacing: -2px; fill: #26251e; }
+  .place { font: 400 21px -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif; fill: #6b6a61; }
+  .label { font: 500 19px -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif; fill: #26251e; }
+  .hub { font: 500 21px ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace; fill: #ffffff; }
+  .sub { font: 400 13px ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace; fill: #6b6a61; }
+  .card { fill: #ecebe8; stroke: #a9a8a1; stroke-width: 1; }
+  .accent { fill: #2456d6; }
+  .wire { fill: none; stroke: #a9a8a1; stroke-width: 1.5; }
+  .pulse { fill: none; stroke: #2456d6; stroke-width: 3; stroke-linecap: round;
+           stroke-dasharray: 16 200; stroke-dashoffset: 16; opacity: 0;
+           animation: run 3.2s cubic-bezier(.5,0,.3,1) 3 both; }
+  .in { animation: enter .7s cubic-bezier(.2,.7,.2,1) both; }
+  @keyframes enter { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+  @keyframes run {
+    0% { stroke-dashoffset: 16; opacity: 0; }
+    8% { opacity: 1; }
+    34% { stroke-dashoffset: -100; opacity: 1; }
+    40%, 100% { stroke-dashoffset: -100; opacity: 0; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .in { animation: none; }
+    .pulse { animation: none; opacity: 0; }
+  }
+</style>
+<rect width="880" height="440" rx="18" fill="#dfdedb"/>
+<g class="in">
+  <text class="name" x="46" y="96">Phuong Doan</text>
+  <text class="place" x="48" y="132">Ho Chi Minh City, Vietnam</text>
+</g>
+<g class="in" style="animation-delay:260ms">
+<path class="wire" d="M198 284 L246 284"/>
+<path class="wire" d="M370 284 C397.0 284 397.0 214 424 214"/>
+<path class="wire" d="M370 284 C397.0 284 397.0 284 424 284"/>
+<path class="wire" d="M370 284 C397.0 284 397.0 354 424 354"/>
+<path class="wire" d="M676 214 C705.0 214 705.0 284 734 284"/>
+<path class="wire" d="M676 284 C705.0 284 705.0 284 734 284"/>
+<path class="wire" d="M676 354 C705.0 354 705.0 284 734 284"/>
+</g>
+<path class="pulse" pathLength="100" style="animation-delay:1100ms" d="M198 284 L246 284"/>
+<path class="pulse" pathLength="100" style="animation-delay:1620ms" d="M370 284 C397.0 284 397.0 214 424 214"/>
+<path class="pulse" pathLength="100" style="animation-delay:1620ms" d="M370 284 C397.0 284 397.0 284 424 284"/>
+<path class="pulse" pathLength="100" style="animation-delay:1620ms" d="M370 284 C397.0 284 397.0 354 424 354"/>
+<path class="pulse" pathLength="100" style="animation-delay:2140ms" d="M676 214 C705.0 214 705.0 284 734 284"/>
+<path class="pulse" pathLength="100" style="animation-delay:2140ms" d="M676 284 C705.0 284 705.0 284 734 284"/>
+<path class="pulse" pathLength="100" style="animation-delay:2140ms" d="M676 354 C705.0 354 705.0 284 734 284"/>
+<g class="in" style="animation-delay:200ms">
+<rect class="card" x="48" y="258.0" width="150" height="52" rx="10"/>
+<text class="label" x="123.0" y="291" text-anchor="middle">Agent query</text>
+</g>
+<g class="in" style="animation-delay:300ms">
+<rect class="accent" x="246" y="258.0" width="124" height="52" rx="10"/>
+<text class="hub" x="308.0" y="291" text-anchor="middle">jarvis</text>
+</g>
+<g class="in" style="animation-delay:420ms">
+<rect class="card" x="424" y="188.0" width="252" height="52" rx="10"/>
+<text class="label" x="550.0" y="215" text-anchor="middle">Symbol index</text>
+<text class="sub" x="550.0" y="232" text-anchor="middle">SCIP</text>
+</g>
+<g class="in" style="animation-delay:490ms">
+<rect class="card" x="424" y="258.0" width="252" height="52" rx="10"/>
+<text class="label" x="550.0" y="285" text-anchor="middle">Lexical search</text>
+<text class="sub" x="550.0" y="302" text-anchor="middle">Zoekt</text>
+</g>
+<g class="in" style="animation-delay:560ms">
+<rect class="card" x="424" y="328.0" width="252" height="52" rx="10"/>
+<text class="label" x="550.0" y="355" text-anchor="middle">Semantic search</text>
+<text class="sub" x="550.0" y="372" text-anchor="middle">LanceDB</text>
+</g>
+<g class="in" style="animation-delay:640ms">
+<rect class="card" x="734" y="258.0" width="98" height="52" rx="10"/>
+<text class="label" x="783.0" y="291" text-anchor="middle">RRF</text>
+</g>
+</svg>
